@@ -1,10 +1,7 @@
 // app/layout.tsx
-import Script from "next/script"
-import { GA_TRACKING_ID } from "@/lib/gtag"
 import { Montserrat } from "next/font/google"
 import "../styles/globals.css"
 import { Toaster } from "react-hot-toast"
-import Analytics from "./analytics"
 import { Suspense } from "react"
 import AIAgent from "@/components/ai-agent"
 const montserrat = Montserrat({
@@ -16,9 +13,7 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Loyal E Services",
   description: "Welcome to Loyal E Services!",
-  alternates: {
-    canonical: 'https://loyaleservices.com/',
-  },
+
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -26,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={montserrat.variable}>
       <body className="flex flex-col h-screen">
         {/* Google Analytics */}
-        {GA_TRACKING_ID && (
+        {/* {GA_TRACKING_ID && (
           <>
             <Script
               strategy="afterInteractive"
@@ -48,12 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }}
             />
           </>
-        )}
+        )} */}
 
         {children}
         <AIAgent />
         <Suspense fallback={<div>Loading animation...</div>}>
-          <Analytics />
+          {/* <Analytics /> */}
         </Suspense>
         <Toaster position="top-center" />
       </body>
