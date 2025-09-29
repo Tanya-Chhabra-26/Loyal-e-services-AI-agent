@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #2563eb;
+  --color-accent: #facc15;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-montserrat);
+  /* line-height: 50px; */
+}
+
+.work-together {
+  background-image: url('./../public/main/get-in-touch-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.custom-swiper .swiper-pagination {
+  margin-top: 3rem !important;
+  position: relative !important;
+}
+
+.swiper-wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
